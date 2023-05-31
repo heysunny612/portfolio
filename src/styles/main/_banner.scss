@@ -1,0 +1,71 @@
+.main_banner {
+  background-image: $bg-bg;
+
+  .banner_content {
+    display: flex;
+    column-gap: 5rem; /* 80px */
+    align-items: center;
+
+    .banner_info {
+      flex: 1 1 0%;
+      text-align: left;
+
+      .title {
+        font-size: 80px;
+        font-family: 'Kanit', sans-serif;
+        text-transform: uppercase;
+        line-height: 1.5;
+      }
+
+      .greetings {
+        font-size: 40px;
+        font-family: 'Kanit', 'Noto Sans KR', sans-serif;
+        margin-bottom: 1.5rem; /* 24px */
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 600;
+      }
+
+      .text {
+        margin-bottom: 2rem; /* 32px */
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem; /* 24px */
+      }
+
+      .social_links {
+        margin-top: 2rem; /* 32px */
+        display: flex;
+        font-size: 20px;
+        column-gap: 1.5rem; /* 24px */
+        max-width: max-content;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner_content {
+    flex-direction: column;
+
+    .banner_info {
+      text-align: center;
+
+      .title {
+        font-size: 55px;
+      }
+      .greetings {
+        font-size: 36px;
+      }
+      .buttons {
+        justify-content: center;
+      }
+      .social_links {
+        justify-content: center;
+      }
+    }
+  }
+}

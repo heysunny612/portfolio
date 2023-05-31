@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+.main_section {
+  padding-top: $header-height;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.common_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .common_inner {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: f1f1f5;
+  background-image: url(/public/assets/bg.svg);
+
+  font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn {
+  background-color: #f6fa70;
+  color: #000;
+}
+
+.gradient {
+  background-color: #0079ff;
+  box-shadow: 0px 4;
+}
+
+@layer base {
+  body {
+    @apply text-lg leading-8 text-black;
+  }
+  h2 {
+    @apply text-[32px] mb-6 tracking-[10%] uppercase;
+  }
+  h3 {
+    @apply font-semibold text-[26px] mb-6 leading-[46px];
+  }
+  .btn {
+    @apply rounded-full text-white font-medium;
+  }
+  .btn-sm {
+    @apply h-[48px] px-6 text-sm;
+  }
+  .btn-lg {
+    @apply h-[56px] px-10 text-base;
+  }
+  .btn-link {
+    @apply text-base;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#ff56f6] font-bold hover:from-[#ff56f6] hover:to-[#42a6e3];
+  }
+}
