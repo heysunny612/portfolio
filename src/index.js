@@ -9,6 +9,7 @@ import About from './pages/About';
 import Skills from './pages/Skills';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
+import { ThemeContextProvider } from './context/ThemeContext';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,8 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ThemeContextProvider>
+      <RouterProvider router={router} />
+    </ThemeContextProvider>
   </React.StrictMode>
 );

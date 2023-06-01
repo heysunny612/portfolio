@@ -2,17 +2,25 @@ $header-height: 70px;
 
 $color-accent: #ff0060;
 $color-primary: #f6fa70;
-$color-white: #ffffff;
+$color-white: rgba(255, 255, 255, 0.9);
 $color-gray: #e2e8f0;
 $color-black: #000000;
-// html[data-theme='light'] {
-//   --color-text: #{$text-color-1};
-//   --color-background: #{$bg-color-1};
-//   --color-btn: #{$btn-color-1};
-// }
+$color-bg-dark: #0f172a;
+$color-dark-deep: #0b1120;
+$color-dark-light: #1e2333;
 
-// html[data-theme='dark'] {
-//   --color-text: #{$text-color-2};
-//   --color-background: #{$bg-color-2};
-//   --color-btn: #{$btn-color-2};
-// }
+html.light {
+  --color-text: #{$color-black};
+  --color-background: #{$color-white};
+  --color-border: #{$color-gray};
+}
+
+html.dark {
+  --color-text: #{$color-white};
+  --color-background: #{$color-bg-dark};
+  --color-border: #{$color-dark-light};
+
+  .header {
+    background-color: $color-dark-deep;
+  }
+}

@@ -17,7 +17,7 @@
 
   .contact_form {
     flex: 1 1 0%;
-    border: 1px solid $color-black;
+    border: 1px solid var(--color-text);
     border-radius: 1rem;
     display: flex;
     justify-items: flex-start;
@@ -28,7 +28,7 @@
     .contact_input,
     .contact_textarea {
       background-color: transparent;
-      border-bottom: 1px solid $color-black;
+      border-bottom: 1px solid var(--color-text);
       width: 100%;
       outline: none;
       padding-top: 0.75rem; /* 12px */

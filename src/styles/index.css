@@ -5,11 +5,12 @@
 @tailwind utilities;
 
 body {
-  background: f1f1f5;
+  background-color: var(--color-background);
   background-image: url(/public/assets/bg.svg);
   font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
   font-size: 18px;
   line-height: 2rem; /* 32px */
+  color: var(--color-text);
 }
 
 @layer base {
