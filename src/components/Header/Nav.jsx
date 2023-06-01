@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 const menuItems = [
-  { to: 'home', title: 'home' },
+  { to: '/', title: 'home' },
   { to: 'about', title: 'about me' },
   { to: 'skills', title: 'skills' },
   { to: 'work', title: 'work' },
@@ -15,9 +15,12 @@ export default function Nav() {
       <ul className='nav_items'>
         {menuItems.map(({ to, title }, idx) => (
           <li key={idx}>
-            <Link to={to} activeClass='active' smooth={true} spy={true}>
+            <NavLink
+              to={to}
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
               {title}
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>

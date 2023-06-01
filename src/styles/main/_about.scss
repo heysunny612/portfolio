@@ -1,0 +1,46 @@
+.main_about {
+  background-image: url('../../../public/assets/bg_img.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .about_content {
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem; /* 40px */
+
+    .about_img {
+      flex: 1 1 0%;
+      img {
+        border-radius: 50px;
+      }
+    }
+
+    .about_info {
+      flex: 1 1 0%;
+
+      .about_count {
+        display: flex;
+        column-gap: 2rem; /* 24px */
+        margin: 30px 0;
+
+        .number {
+          font-size: 40px;
+          margin-bottom: 0.5rem; /* 8px */
+        }
+
+        .desc {
+          font-size: 0.875rem; /* 14px */
+          line-height: 1.25rem; /* 20px */
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about_content {
+    flex-direction: column;
+    row-gap: 2.5rem; /* 40px */
+  }
+}

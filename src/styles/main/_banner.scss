@@ -1,6 +1,4 @@
 .main_banner {
-  background-image: $bg-bg;
-
   .banner_content {
     display: flex;
     column-gap: 5rem; /* 80px */
@@ -12,7 +10,7 @@
 
       .title {
         font-size: 80px;
-        font-family: 'Kanit', sans-serif;
+        font-family: 'Kanit', 'Noto Sans KR', sans-serif;
         text-transform: uppercase;
         line-height: 1.5;
       }
@@ -26,14 +24,12 @@
         font-weight: 600;
       }
 
-      .text {
-        margin-bottom: 2rem; /* 32px */
+      .ani_text {
+        color: $color-accent;
       }
 
-      .buttons {
-        display: flex;
-        align-items: center;
-        column-gap: 1.5rem; /* 24px */
+      .text {
+        margin-bottom: 2rem; /* 32px */
       }
 
       .social_links {
@@ -44,6 +40,16 @@
         max-width: max-content;
       }
     }
+
+    .banner_avatar {
+      flex: 1 1 0%;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .banner_avatar {
+    display: none;
   }
 }
 

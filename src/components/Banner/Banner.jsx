@@ -6,8 +6,8 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
 import fadeIn from '../../utils/fadeIn';
-import Model from '../Avatar';
-import Button from '../Button/Button';
+import Model from './Avatar';
+import Button from '../Button';
 
 const typeAni = [
   '안녕하세요',
@@ -49,7 +49,7 @@ export default function Banner() {
                 sequence={typeAni}
                 speed={50}
                 repeat={Infinity}
-                className='text-accent'
+                className='ani_text'
                 wrapper='span'
               />
             </motion.div>
@@ -72,7 +72,7 @@ export default function Banner() {
               initial='hidden'
               whileInView='show'
               viewport={{ once: false, amount: 0.7 }}
-              className='buttons'
+              className='common_buttons'
             >
               <Button>Contact me</Button>
               <a href='/' className='text-gradient btn-link'>
@@ -107,7 +107,7 @@ export default function Banner() {
             variants={fadeIn('down', 0.5)}
             initial='hidden'
             whileInView='show'
-            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px] mx-auto'
+            className='banner_avatar'
           >
             <Canvas
               camera={{ position: [0, 0, 10], fov: 12 }}

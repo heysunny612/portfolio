@@ -1,20 +1,14 @@
-import About from './components/About';
-import Banner from './components/Banner/Banner';
-import Contact from './components/Contact';
+import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Services from './components/Services';
-import Work from './components/Work';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='overflow-hidden'>
+    <>
       <Header />
-      <Banner />
-      <About />
-      <Services />
-      <Work />
-      <Contact />
-    </div>
+      <Outlet />
+      <Footer />
+    </>
   );
 }
 

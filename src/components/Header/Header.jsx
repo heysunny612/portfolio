@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './Nav';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -7,7 +8,9 @@ export default function Header() {
       <div className='common_inner'>
         <div className='header_content'>
           <h1 className='header_logo'>
-            HWANG <span></span> SUYEON
+            <Link to='/'>
+              HWANG <span></span> SUYEON
+            </Link>
           </h1>
           <Nav />
         </div>

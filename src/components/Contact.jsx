@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import fadeIn from '../utils/fadeIn';
+import Button from '../components/Button';
 
 export default function Contact() {
   return (
-    <section className='py-16 lg:section' id='contact'>
-      <div className='common_inner container mx-auto'>
-        <div className='main_section flex flex-col lg:flex-row'>
+    <section className='main_section' id='contact'>
+      <div className='common_inner'>
+        <div className='contact_content'>
           <motion.div
             variants={fadeIn('right', 0.3)}
             initial='hidden'
@@ -15,18 +16,14 @@ export default function Contact() {
               once: false,
               amount: 0.3,
             }}
-            className='flex-1 flex justify-start items-center'
+            className='contact_text'
           >
-            <div>
-              <h4 className='text-xl uppercase text-accent font-medium mb-2 tracking-wide'>
-                Get In Touch
-              </h4>
-              <h2 className='text-[45px] lg:text-[90px] leading-none mb-12'>
-                Let`s work <br /> together!
-              </h2>
-            </div>
+            <h2 className='common_h2'>Get In Touch</h2>
+            <p className='text'>
+              Let`s work <br /> together!
+            </p>
           </motion.div>
-          <motion.form
+          <motion.div
             variants={fadeIn('left', 0.3)}
             initial='hidden'
             whileInView='show'
@@ -34,24 +31,27 @@ export default function Contact() {
               once: false,
               amount: 0.3,
             }}
-            className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'
+            className='contact_form'
           >
-            <input
-              className='bg-transparent border-b py-3 w-full outline-none placeholder:text-white focus:border-accent transition-all'
-              type='text'
-              placeholder='Your email'
-            />
-            <input
-              className='bg-transparent border-b py-3 w-full outline-none placeholder:text-white focus:border-accent transition-all'
-              type='text'
-              placeholder='Your name'
-            />
-            <textarea
-              className='bg-transparent border-b py-12 w-full outline-none placeholder:text-white focus:border-accent transition-all resize-none mb-12'
-              placeholder='Your message'
-            ></textarea>
-            <button className='btn btn-lg'>Send Message</button>
-          </motion.form>
+            <form>
+              <input
+                className='contact_input'
+                type='text'
+                placeholder='Your email'
+              />
+              <input
+                className='contact_input'
+                type='text'
+                placeholder='Your name'
+              />
+              <textarea
+                className='contact_textarea  py-12  resize-none mb-12'
+                placeholder='Your message'
+                rows={4}
+              ></textarea>
+              <Button>Send Message</Button>
+            </form>
+          </motion.div>
         </div>
       </div>
     </section>

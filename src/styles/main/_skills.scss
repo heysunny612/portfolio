@@ -1,0 +1,27 @@
+.skills_content {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem; /* 32px */
+
+  .skills_info {
+    flex: 1 1 0%;
+
+    .desc {
+      margin-bottom: 2rem; /* 32px */
+    }
+  }
+
+  .skills_graph {
+    flex: 1 1 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills_content {
+    flex-direction: column;
+
+    .skills_info {
+      margin-bottom: 2.75rem; /* 44px */
+    }
+  }
+}
