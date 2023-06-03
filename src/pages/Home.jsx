@@ -14,7 +14,7 @@ export default function Home() {
       <Skills />
       <Work />
       <Contact />
-      <SideNav />
+      <SideNav location='right' />
     </>
   );
 }

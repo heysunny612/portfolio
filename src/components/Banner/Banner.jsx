@@ -25,7 +25,7 @@ const typeAni = [
 ];
 export default function Banner() {
   return (
-    <section className='main_section main_banner' id='home'>
+    <section className='common_section main_banner' id='home'>
       <div className='common_inner'>
         <div className='banner_content'>
           <div className='banner_info'>
@@ -34,7 +34,7 @@ export default function Banner() {
               initial='hidden'
               whileInView='show'
               viewport={{ once: false, amount: 0.7 }}
-              className='title'
+              className='title common_txt_light'
             >
               I'm suyeon
             </motion.p>
@@ -62,10 +62,11 @@ export default function Banner() {
             >
               위에 문장은 제가 여행으로 다녀온 일부나라들의 인사말입니다.
               누군가에게는 익숙하게 다가올 수도 있고 또 누군가에게는 처음보는
-              이상한(?) 글이겠지만, 각 나라의 가장 "기본적인" 인사말입니다. 내가
-              모를 수도 있는 것, 내게 익숙하지 않은 것들이 개발자에게는 언제나
-              일어나는 일상이라고 생각합니다. 알고 나면 별거 아닌 걸수도 있는
-              것들을 지나치지 않고, ~~블라블라블라~
+              이상한(?) 글이겠지만, 각 나라의 가장{' '}
+              <span className='common_accent'>"기본적인"</span> 인사말입니다.
+              내가 모를 수도 있는 것, 내게 익숙하지 않은 것들이 개발자에게는
+              언제나 일어나는 일상이라고 생각합니다. 알고 나면 별거 아닌 걸수도
+              있는 것들을 지나치지 않고, ~~블라블라블라~
             </motion.p>
             <motion.div
               variants={fadeIn('up', 0.6)}
@@ -74,34 +75,9 @@ export default function Banner() {
               viewport={{ once: false, amount: 0.7 }}
               className='common_buttons'
             >
-              <Button>Contact me</Button>
-              <a href='/' className='text-gradient btn-link'>
-                My Portfolio
-              </a>
+              <Button accent>Contact me</Button>
+              <Button>Check out my work</Button>
             </motion.div>
-            <motion.ul
-              variants={fadeIn('up', 0.7)}
-              initial='hidden'
-              whileInView='show'
-              viewport={{ once: false, amount: 0.7 }}
-              className='social_links'
-            >
-              <li>
-                <a href='/' target='_blank' rel='noreferrer'>
-                  <FaYoutube />
-                </a>
-              </li>
-              <li>
-                <a href='/' target='_blank' rel='noreferrer'>
-                  <FaGithub />
-                </a>
-              </li>
-              <li>
-                <a href='/' target='_blank' rel='noreferrer'>
-                  <FaDribbble />
-                </a>
-              </li>
-            </motion.ul>
           </div>
           <motion.div
             variants={fadeIn('down', 0.5)}

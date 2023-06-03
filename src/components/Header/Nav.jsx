@@ -4,11 +4,11 @@ import { CiDark, CiLight } from 'react-icons/ci';
 import { useThemeContext } from '../../context/ThemeContext';
 
 const menuItems = [
-  { to: '/', title: 'Home' },
-  { to: 'about', title: 'About me' },
-  { to: 'skills', title: 'Blog' },
-  { to: 'work', title: 'Work' },
-  { to: 'contact', title: 'Contact' },
+  { id: 1, to: '/', title: 'Home' },
+  { id: 2, to: 'about', title: 'About' },
+  { id: 3, to: 'work', title: 'Work' },
+  { id: 4, to: 'blog', title: 'Blog' },
+  { id: 5, to: 'switter', title: 'switter' },
 ];
 
 export default function Nav() {
@@ -17,18 +17,21 @@ export default function Nav() {
   return (
     <nav className='nav'>
       <ul className='nav_items'>
-        {menuItems.map(({ to, title }, idx) => (
-          <li key={idx}>
+        {menuItems.map(({ id, to, title }) => (
+          <li key={id}>
             <NavLink
               to={to}
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
+              <span>0{id}.</span>
               {title}
             </NavLink>
           </li>
         ))}
       </ul>
-      <button onClick={toggleTheme}>{theme ? <CiDark /> : <CiLight />}</button>
+      <button className='btn_theme' onClick={toggleTheme}>
+        {theme ? <CiDark /> : <CiLight />}
+      </button>
     </nav>
   );
 }

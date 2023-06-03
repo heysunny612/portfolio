@@ -26,7 +26,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className='main_section' id='skills'>
+    <section className='common_section' id='skills'>
       <div className='common_inner'>
         <div className='skills_content'>
           <motion.div
@@ -46,10 +46,8 @@ export default function Services() {
               웹서비스를 설게하고자함
             </p>
             <div className='common_buttons'>
+              <Button accent>View more</Button>
               <Button>See my work</Button>
-              <a href='/' className='text-gradient btn-link'>
-                My Portfolio
-              </a>
             </div>
           </motion.div>
           <motion.div

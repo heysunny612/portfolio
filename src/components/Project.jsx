@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Project() {
   return (
-    <div className='project group'>
+    <div className='project'>
       <a href='/'>
         <div className='project_hover'></div>
         <img

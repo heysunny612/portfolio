@@ -1,20 +1,24 @@
 .btn_primary {
-  background-color: #f6fa70;
   color: #000;
-  border-radius: 100px;
+  border-radius: 5px;
   padding: 12px 35px;
   font-size: 16px;
   font-weight: bold;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: rgba($color: #ffffff, $alpha: 0.1);
+  }
+  &.accent {
+    background-color: var(--color-accent);
+    color: #000;
+
+    &:hover {
+      background-color: var(--color-accent-opacity);
+    }
+  }
 }
-// .btn {
-//   @apply rounded-full text-white font-medium;
-// }
-// .btn-sm {
-//   @apply h-[48px] px-6 text-sm;
-// }
-// .btn-lg {
-//   @apply h-[56px] px-10 text-base;
-// }
-// .btn-link {
-//   @apply text-base;
-// }

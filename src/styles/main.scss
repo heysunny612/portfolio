@@ -3,8 +3,9 @@
 @import 'abstracts/variables';
 
 @import 'layout/common';
+@import 'layout/header';
+@import 'layout/footer';
 
-@import 'main/header';
 @import 'main/banner';
 @import 'main/about';
 @import 'main/skills';
@@ -14,3 +15,6 @@
 @import 'components/button';
 @import 'components/side_nav';
 @import 'components/project';
+@import 'components/projectCard';
+
+@import 'pages/work';

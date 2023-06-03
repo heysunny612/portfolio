@@ -6,7 +6,7 @@ import Project from '../components/Project';
 
 export default function Work() {
   return (
-    <section className='main_section' id='work'>
+    <section className='common_section' id='work'>
       <div className='common_inner'>
         <div className='work_content'>
           <motion.div

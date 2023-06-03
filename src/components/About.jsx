@@ -4,14 +4,13 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import fadeIn from '../utils/fadeIn';
 import Button from '../components/Button';
-import { Link } from 'react-router-dom';
 
 export default function About() {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
   return (
-    <section className='main_section main_about' id='about' ref={ref}>
+    <section className='common_section main_about' id='about' ref={ref}>
       <div className='common_inner'>
         <div className='about_content'>
           <motion.div
@@ -72,10 +71,8 @@ export default function About() {
               </li>
             </ul>
             <div className='common_buttons'>
-              <Button>View more</Button>
-              <Link to='work' className='text-gradient'>
-                My Portfolio
-              </Link>
+              <Button accent>View more</Button>
+              <Button>My portfolio</Button>
             </div>
           </motion.div>
         </div>

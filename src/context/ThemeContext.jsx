@@ -10,7 +10,7 @@ export const ThemeContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const isDarkMode = localStorage.theme === 'dark';
+    const isDarkMode = localStorage.theme === 'light';
     setTheme(isDarkMode);
     updateTheme(isDarkMode);
   }, []);

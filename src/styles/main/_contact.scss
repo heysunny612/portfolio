@@ -17,9 +17,10 @@
 
   .contact_form {
     flex: 1 1 0%;
-    border: 1px solid var(--color-text);
+    border: 1px solid var(--color-text-light);
     border-radius: 1rem;
     display: flex;
+    flex-direction: column;
     justify-items: flex-start;
     padding: 1.5rem;
     padding-bottom: 6rem; /* 96px */
@@ -28,7 +29,7 @@
     .contact_input,
     .contact_textarea {
       background-color: transparent;
-      border-bottom: 1px solid var(--color-text);
+      border-bottom: 1px solid var(--color-text-light);
       width: 100%;
       outline: none;
       padding-top: 0.75rem; /* 12px */
@@ -38,7 +39,7 @@
       transition-duration: 150ms;
 
       &:focus {
-        border-bottom: 1px solid $color-accent;
+        border-bottom: 1px solid var(--color-accent);
       }
       .contact_textarea {
         padding-top: 3rem; /* 48px */

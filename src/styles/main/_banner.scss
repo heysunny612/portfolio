@@ -1,7 +1,7 @@
 .main_banner {
   .banner_content {
     display: flex;
-    column-gap: 5rem; /* 80px */
+    column-gap: 1.5rem; /* 24px */
     align-items: center;
 
     .banner_info {
@@ -25,19 +25,13 @@
       }
 
       .ani_text {
-        color: $color-accent;
+        color: var(--color-accent);
+        font-size: 50px;
       }
 
       .text {
         margin-bottom: 2rem; /* 32px */
-      }
-
-      .social_links {
-        margin-top: 2rem; /* 32px */
-        display: flex;
-        font-size: 20px;
-        column-gap: 1.5rem; /* 24px */
-        max-width: max-content;
+        color: var(--color-text-light);
       }
     }
 

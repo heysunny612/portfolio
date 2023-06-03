@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
+import { BsStar } from 'react-icons/bs';
 
 export default function Header() {
   return (
@@ -9,7 +10,11 @@ export default function Header() {
         <div className='header_content'>
           <h1 className='header_logo'>
             <Link to='/'>
-              HWANG <span></span> SUYEON
+              <BsStar />
+              <span className='star'>
+                <BsStar />
+              </span>
+              <span>S</span>
             </Link>
           </h1>
           <Nav />

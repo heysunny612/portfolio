@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
+import SideNav from './components/SideNav';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Outlet />
       <Footer />
+      <SideNav location='left' />
     </>
   );
 }
